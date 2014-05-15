@@ -22,6 +22,7 @@
           <h2 id="project_tagline">Activiti module for Ninja framework</h2>
 
             <section id="downloads">
+               <a class="tar_download_link" href="https://github.com/mortezaadi/ninja-activiti-module/releases/tag/ninja-activiti-module-0.0.1">Download this project as a tar.gz file</a>
               <a class="zip_download_link" href="https://github.com/mortezaadi/ninja-activiti-module/zipball/master">Download this project as a .zip file</a>
               <a class="tar_download_link" href="https://github.com/mortezaadi/ninja-activiti-module/tarball/master">Download this project as a tar.gz file</a>
             </section>
@@ -60,7 +61,7 @@ protected void configure() {
 </code></pre>
 
 <p>3) All set! Start Ninja application and activiti engine will be started with an in-memory database and default configs.
-you can inject activiti ProcessEngin, FormService, TaskService,... in your code.</p>
+you can inject activiti ProcessEngin, FormService, TaskService, ... in your code.</p>
 
 <pre><code>@Singleton
 public class Sample {
@@ -88,15 +89,15 @@ public class Sample {
 <h2>
 <a name="activiti-engine-configurations" class="anchor" href="#activiti-engine-configurations"><span class="octicon octicon-link"></span></a>Activiti Engine Configurations</h2>
 
-<p>1) you can create activiti.cfg.xml in 'conf' directory.This file will be used as a default activiti configurations. for more detail on how to use the file refer to '<a href="http://www.activiti.org/userguide/">www.activiti.org/userguide/</a>'. </p>
+<p>1) You can create activiti.cfg.xml in 'conf' directory.This file will be used as a default activiti configurations. for more detail on how to use the file refer to '<a href="http://www.activiti.org/userguide/">www.activiti.org/userguide/</a>'. </p>
 
-<p>2) you can also choose the 'configuration file' in conf/application.conf.</p>
+<p>2) You can also choose the 'configuration file' in conf/application.conf.</p>
 
 <pre><code>activiti.cfg.path=conf/my.activiti.cfg.xml
 %test.activiti.cfg.path=conf/mytest.activiti.cfg.xml
 </code></pre>
 
-<p>3) there is also possibility to set activiti configuration in  conf/application.conf file without providing activiti xml configuration file.</p>
+<p>3) There is also possibility to set activiti configuration in  conf/application.conf file without providing activiti xml configuration file.</p>
 
 <pre><code>...
 activiti.jdbcDriver=org.h2.Driver
@@ -107,7 +108,7 @@ activiti.mailServerHost=localhost
 ...
 </code></pre>
 
-<p>consult activiti documents for list of all process engin configs '<a href="http://www.activiti.org/userguide/">www.activiti.org/userguide/</a>'.</p>
+<p>consult activiti documents for list of all process engine configurations '<a href="http://www.activiti.org/userguide/">www.activiti.org/userguide/</a>'.</p>
 
 <p>4) Mixed-mode: you can also mix xml and property configuration. by providing both activiti.cfg.xml file and ninja properties(conf/application.conf). configs in conf/application.conf overrides xml configuration.</p>
 
@@ -129,8 +130,6 @@ activiti.mailServerHost=localhost
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-
-    
 
   </body>
 </html>
