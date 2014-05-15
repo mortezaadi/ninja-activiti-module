@@ -12,7 +12,7 @@ Setup
 1) Add the ninja-rythm dependency to your pom.xml:
 
     <dependency>
-        <groupId>ir.cafebabe</groupId>
+        <groupId>ir.cafebabe.ninja</groupId>
         <artifactId>ninja-activiti-module</artifactId>
         <version>0.0.1</version>
     </dependency>
