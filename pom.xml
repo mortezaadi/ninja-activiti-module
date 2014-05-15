@@ -211,7 +211,7 @@
   <artifactId>ninja-activiti-module</artifactId>
   <packaging>jar</packaging>
   <name>Ninja Activiti Module</name>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <description>Activiti module for Ninja framework</description>
   <url>http://www.cafebabe.ir</url>
   
