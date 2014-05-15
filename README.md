@@ -1,7 +1,8 @@
 Activiti BPM Engine module for Ninja framework.
-=====================
+===============================================
 Activiti (http://activiti.org/) is a light-weight workflow and Business Process Management (BPM) Platform targeted at business people, developers and system admins. Its core is a super-fast and rock-solid BPMN 2 process engine for Java.
 
+This module runs activiti inside Ninja framework (http://www.ninjaframework.org/). 
 
 Getting started
 ---------------
@@ -9,7 +10,7 @@ Getting started
 Setup
 -----
 
-1) Add the ninja-rythm dependency to your pom.xml:
+1) Add the ninja-activiti-module dependency to your pom.xml:
 
     <dependency>
         <groupId>ir.cafebabe.ninja</groupId>
@@ -25,7 +26,7 @@ Setup
     }
     
 3) All set! Start Ninja application and activiti engine will be started with an in-memory database and default configs.
-you can inject activiti ProcessEngin, FormService, TaskService,... in your code.
+you can inject activiti ProcessEngine, FormService, TaskService, ... in your code.
 
     @Singleton
     public class Sample {
@@ -53,14 +54,14 @@ you can inject activiti ProcessEngin, FormService, TaskService,... in your code.
 Activiti Engine Configurations
 ------------------------------
 
-1) you can create activiti.cfg.xml in 'conf' directory.This file will be used as a default activiti configurations. for more detail on how to use the file refer to 'www.activiti.org/userguide/'. 
+1) You can create activiti.cfg.xml in 'conf' directory. This file will be used as a default activiti configurations. for more detail on how to use the file refer to "www.activiti.org/userguide/". 
 
-2) you can also choose the 'configuration file' in conf/application.conf.
+2) You can also choose the "configuration file" in conf/application.conf.
     
     activiti.cfg.path=conf/my.activiti.cfg.xml
     %test.activiti.cfg.path=conf/mytest.activiti.cfg.xml
 
-3) there is also possibility to set activiti configuration in  conf/application.conf file without providing activiti xml configuration file.
+3) There is also possibility to set activiti configuration in  conf/application.conf file without providing activiti xml configuration file.
 
     ...
     activiti.jdbcDriver=org.h2.Driver
@@ -70,16 +71,16 @@ Activiti Engine Configurations
     activiti.mailServerHost=localhost
     ...
 
-  consult activiti documents for list of all process engin configs 'www.activiti.org/userguide/'.
+  consult activiti documents for list of all process engine configurations "www.activiti.org/userguide/".
 
-4) Mixed-mode: you can also mix xml and property configuration. by providing both activiti.cfg.xml file and ninja properties(conf/application.conf). configs in conf/application.conf overrides xml configuration.
+4) Mixed-mode: You can also mix xml and property configuration. by providing both activiti.cfg.xml file and ninja properties(conf/application.conf). configs in conf/application.conf overrides xml configuration.
 
-5) No configuration: if there was no configuration, the default activiti configurations with an in-memory database will be applied.
+5) No configuration: If there was no configuration, the default activiti configurations with an in-memory database will be applied.
 
-Order of reading configurations
+Order of applying configurations
 -------------------------------
 
- step1) if Default activiti.cfg.xml is provided it will be read unless you explicitly set the config file path in  'conf/application.conf' --> activiti.cfg.path=conf/my.activiti.cfg.xml
+ Step1) If Default activiti.cfg.xml is provided it will be read unless you explicitly set the config file path in  "conf/application.conf" --> activiti.cfg.path=conf/my.activiti.cfg.xml
 
- step2) if there are activiti configuration in 'conf/application.conf' they will be override xml configurations.
+ Step2) If there are activiti configuration in "conf/application.conf" they will be override xml configurations.
 
