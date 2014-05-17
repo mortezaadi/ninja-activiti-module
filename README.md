@@ -2,7 +2,7 @@ Activiti BPM Engine module for Ninja framework.
 ===============================================
 Activiti (http://activiti.org/) is a light-weight workflow and Business Process Management (BPM) Platform targeted at business people, developers and system admins. Its core is a super-fast and rock-solid BPMN 2 process engine for Java.
 
-This module runs activiti inside Ninja framework (http://www.ninjaframework.org/). 
+This module helps running activiti inside Ninja framework (http://www.ninjaframework.org/). 
 
 Getting started
 ---------------
