@@ -36,6 +36,8 @@
 
 <p>Activiti (<a href="http://activiti.org/">http://activiti.org/</a>) is a light-weight workflow and Business Process Management (BPM) Platform targeted at business people, developers and system admins. Its core is a super-fast and rock-solid BPMN 2 process engine for Java.</p>
 
+<p>This module helps running activiti inside Ninja framework (<a href="http://www.ninjaframework.org/">http://www.ninjaframework.org/</a>). </p>
+
 <h2>
 <a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting started</h2>
 
@@ -60,7 +62,7 @@ protected void configure() {
 </code></pre>
 
 <p>3) All set! Start Ninja application and activiti engine will be started with an in-memory database and default configs.
-you can inject activiti ProcessEngin, FormService, TaskService, ... in your code.</p>
+you can inject activiti ProcessEngine, FormService, TaskService, ... in your code.</p>
 
 <pre><code>@Singleton
 public class Sample {
@@ -88,9 +90,9 @@ public class Sample {
 <h2>
 <a name="activiti-engine-configurations" class="anchor" href="#activiti-engine-configurations"><span class="octicon octicon-link"></span></a>Activiti Engine Configurations</h2>
 
-<p>1) You can create activiti.cfg.xml in 'conf' directory.This file will be used as a default activiti configurations. for more detail on how to use the file refer to '<a href="http://www.activiti.org/userguide/">www.activiti.org/userguide/</a>'. </p>
+<p>1) You can create activiti.cfg.xml in 'conf' directory. This file will be used as a default activiti configurations. for more detail on how to use the file refer to "<a href="http://www.activiti.org/userguide/">www.activiti.org/userguide/</a>". </p>
 
-<p>2) You can also choose the 'configuration file' in conf/application.conf.</p>
+<p>2) You can also choose the "configuration file" in conf/application.conf.</p>
 
 <pre><code>activiti.cfg.path=conf/my.activiti.cfg.xml
 %test.activiti.cfg.path=conf/mytest.activiti.cfg.xml
@@ -107,18 +109,18 @@ activiti.mailServerHost=localhost
 ...
 </code></pre>
 
-<p>consult activiti documents for list of all process engine configurations '<a href="http://www.activiti.org/userguide/">www.activiti.org/userguide/</a>'.</p>
+<p>consult activiti documents for list of all process engine configurations "<a href="http://www.activiti.org/userguide/">www.activiti.org/userguide/</a>".</p>
 
-<p>4) Mixed-mode: you can also mix xml and property configuration. by providing both activiti.cfg.xml file and ninja properties(conf/application.conf). configs in conf/application.conf overrides xml configuration.</p>
+<p>4) Mixed-mode: You can also mix xml and property configuration. by providing both activiti.cfg.xml file and ninja properties(conf/application.conf). configs in conf/application.conf overrides xml configuration.</p>
 
-<p>5) No configuration: if there was no configuration, the default activiti configurations with an in-memory database will be applied.</p>
+<p>5) No configuration: If there was no configuration, the default activiti configurations with an in-memory database will be applied.</p>
 
 <h2>
-<a name="order-of-reading-configurations" class="anchor" href="#order-of-reading-configurations"><span class="octicon octicon-link"></span></a>Order of reading configurations</h2>
+<a name="order-of-applying-configurations" class="anchor" href="#order-of-applying-configurations"><span class="octicon octicon-link"></span></a>Order of applying configurations</h2>
 
-<p>step1) if Default activiti.cfg.xml is provided it will be read unless you explicitly set the config file path in  'conf/application.conf' --&gt; activiti.cfg.path=conf/my.activiti.cfg.xml</p>
+<p>Step1) If Default activiti.cfg.xml is provided it will be read unless you explicitly set the config file path in  "conf/application.conf" --&gt; activiti.cfg.path=conf/my.activiti.cfg.xml</p>
 
-<p>step2) if there are activiti configuration in 'conf/application.conf' they will be override xml configurations.</p>
+<p>Step2) If there are activiti configuration in "conf/application.conf" they will be override xml configurations.</p>
       </section>
     </div>
 
@@ -129,6 +131,8 @@ activiti.mailServerHost=localhost
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
+
+    
 
   </body>
 </html>
