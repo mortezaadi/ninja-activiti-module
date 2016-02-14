@@ -232,7 +232,7 @@ import com.google.inject.Singleton;
  *Install the module in your conf.Module:
  * <pre>
  *   protected void configure() {
- *       install(new NinjaRythmModule());
+ *       install(new ActivitiModule());
  *   }
  * </pre>
  * 
@@ -241,6 +241,7 @@ import com.google.inject.Singleton;
  */
 public class ActivitiModule extends AbstractModule {
 	
+	@Override
 	protected void configure() {
 		bind(ProcessEngine.class).toProvider(ProcessEngineProvider.class).in(Singleton.class);
 		bind(FormService.class).toProvider(FormServiceProvider.class).in(Singleton.class);
