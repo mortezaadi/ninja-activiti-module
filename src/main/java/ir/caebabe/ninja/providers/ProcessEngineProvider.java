@@ -242,7 +242,7 @@ public class ProcessEngineProvider implements Provider<ProcessEngine> {
 
 	@Override
 	public ProcessEngine get() {
-		logger.info("Initializing Activit Process engine ...");
+		logger.info("Initializing Activiti Process engine ...");
 		ProcessEngineConfiguration configuration;
 		String cfgPath = ninjaProperties
 				.get(ActivitiConstants.ACTIVITI_BPMS_CONFIGURATION_PATH);
@@ -255,7 +255,7 @@ public class ProcessEngineProvider implements Provider<ProcessEngine> {
 		}
 			
 		if (cfgPath != null && !cfgPath.equals("")) {
-			logger.info("Loading Activit configs file from '{}' ...", cfgPath);
+			logger.info("Loading Activiti configs file from '{}' ...", cfgPath);
 			configuration = ProcessEngineConfiguration
 					.createProcessEngineConfigurationFromResource(cfgPath);
 		} else if (defaultCfgResource.exists()
@@ -266,7 +266,7 @@ public class ProcessEngineProvider implements Provider<ProcessEngine> {
 			configuration = ProcessEngineConfiguration
 					.createProcessEngineConfigurationFromResource(ActivitiConstants.ACTIVITI_DEFAULT_CONFIGURATION_PATH);
 		} else {
-			logger.info("Loading with no Activit configs file ");
+			logger.info("Loading with no Activiti configs file ");
 			// configuration = ProcessEngineConfiguration
 			// .createStandaloneProcessEngineConfiguration();
 			configuration = ProcessEngineConfiguration
